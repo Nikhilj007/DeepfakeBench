@@ -24,7 +24,7 @@ import torch.optim as optim
 
 from dataset.abstract_dataset import DeepfakeAbstractBaseDataset
 from dataset.ff_blend import FFBlendDataset
-from dataset.fwa_blend import FWABlendDataset
+# from dataset.fwa_blend import FWABlendDataset
 from dataset.pair_dataset import pairDataset
 
 from trainer.trainer import Trainer
@@ -182,7 +182,7 @@ def main():
         except:
             epoch = 0
         ckpt = torch.load(weights_path, map_location=device)
-        model.load_state_dict(ckpt, strict=True)
+        model.load_state_dict(ckpt, strict=False)
         print('===> Load checkpoint done!')
     else:
         print('Fail to load the pre-trained weights')

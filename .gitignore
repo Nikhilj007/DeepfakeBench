@@ -5,3 +5,12 @@
 *.pth
 *.pt
 *.dat
+datasets/
+datasets/
+data/
+*.pth
+*.png
+*.pt
+*.ckpt
+__pycache__/
+*.pyc
